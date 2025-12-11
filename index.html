@@ -28,15 +28,13 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <span class="eyebrow">Live OpenTTD feed</span>
-          <h1>Live transport simulation API, free to try</h1>
+          <h1>Live Transport Simulation Data</h1>
           <p class="hero-subtitle">
-            Tap into a running OpenTTD game. Live JSON with companies, vehicles,
-            towns, industries, finances, and stations&mdash;ready for dashboards, tests, or demos.
-          </p>
+            Playful data set for serious engineering and data science
           <div class="pill-row">
-            <span class="pill">Live JSON feed</span>
-            <span class="pill">Free access token</span>
+            <span class="pill">REST API with JSON response</span>
+            <span class="pill">Free access with token</span>
+            <span class="pill">Documentation & examples</span>
           </div>
 
           <div class="signup-card">
@@ -55,42 +53,7 @@
           <div class="image-placeholder hero-image">
             <img src="assets/image/game_screenshot_02.png" alt="OpenTTD live map preview" />
           </div>
-
-          <ul class="hero-highlights">
-            <li>Treat the OpenTTD map as a shared, always-on sandbox.</li>
-            <li>Great for demos, dashboards, teaching pipelines, and data quality checks.</li>
-          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- DATASET OVERVIEW -->
-    <section id="dataset" class="section section-alt">
-      <div class="container">
-        <h2>What you get in the feed</h2>
-        <p class="section-intro">
-          Data updates as the simulation runs. Use it as a living dataset for prototypes,
-          dashboards, or ETL tests.
-        </p>
-        <div class="data-grid">
-          <div class="data-card">
-            <h3>Companies</h3>
-            <p>Names, value, loans, profit, and performance.</p>
-          </div>
-          <div class="data-card">
-            <h3>Vehicles</h3>
-            <p>Type, position, speed, orders, and status for each vehicle.</p>
-          </div>
-          <div class="data-card">
-            <h3>Stations</h3>
-            <p>Coverage, waiting cargo, and cargo types.</p>
-          </div>
-          <div class="data-card">
-            <h3>Industries</h3>
-            <p>Production rates, accepted cargo, output, and locations.</p>
-          </div>
-        </div>
-        <p class="inline-note">Drop the JSON straight into dashboards, notebooks, pipelines, or UI demos.</p>
       </div>
     </section>
 
@@ -124,12 +87,12 @@
         <div>
           <h2>The simulation behind the API</h2>
           <p class="section-intro">
-            The API is backed by a live OpenTTD world—the open-source transport management game simulating trains, road vehicles, ships, and aircraft on a shared map.
+            The API is backed by running open-source transport management game (OpenTTD) simulating trains, road vehicles, ships, and aircraft on a shared map.
           </p>
           <ul class="bullet-list">
-            <li>Real companies compete for cargo across towns, industries, and stations.</li>
-            <li>Vehicles move with real positions, speeds, orders, and status updates.</li>
-            <li>The map evolves over time, so your data reflects a living network.</li>
+            <li>AI Companies compete for cargo across towns, industries, and stations.</li>
+            <li>Vehicles report real positions, speeds, profit, and status updates.</li>
+            <li>The map evolves over the day, so your data reflects a living network.</li>
           </ul>
         </div>
         <div class="image-stack">
@@ -137,6 +100,37 @@
             <img src="assets/image/game_screenshot_05.png" alt="OpenTTD live simulation view with trains and industries" />
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- DATASET OVERVIEW -->
+    <section id="dataset" class="section section-alt">
+      <div class="container">
+        <h2>What you get from the API</h2>       
+        <div class="data-grid">
+          <div class="data-card">
+            <h3>Companies</h3>
+            <p>Names, value, loans, profit, and performance.</p>
+          </div>
+          <div class="data-card">
+            <h3>Vehicles</h3>
+            <p>Type, position, speed, orders, and status for each vehicle.</p>
+          </div>
+          <div class="data-card">
+            <h3>Stations</h3>
+            <p>Coverage, waiting cargo, and cargo types.</p>
+          </div>
+          <div class="data-card">
+            <h3>Industries</h3>
+            <p>Production rates, accepted cargo, output, and locations.</p>
+          </div>
+        </div>
+
+        <ul class="bullet-list">
+          <li>Each in-game month is saved as a snapshot every two minutes.</li>
+          <li>You can fetch the latest live state or query historical snapshotss.</li>
+          <li>The entire world resets at 24:00 UTC, giving you 60 years of simulation.</li>
+        </ul>
       </div>
     </section>
 
@@ -176,7 +170,7 @@ curl https://api.opensimdata.example.com/v1/companies \
       <div class="container">
         <h2>Explore the documentation</h2>
         <p class="section-intro">
-          Full API reference with endpoints, parameters, sample responses, and auth guidance so you can ship fast.
+          Full API reference with endpoints, parameters, sample responses, and auth guidance so you can get started easily.
         </p>
         <div class="image-card">
           <img src="assets/image/documentation_01.png" alt="OpenSimData API documentation screenshot" />
