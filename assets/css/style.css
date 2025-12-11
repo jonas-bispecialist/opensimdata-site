@@ -69,6 +69,12 @@ a:hover { color: var(--color-primary-dark); }
 .hero-highlights li { margin-bottom: 0.45rem; padding-left: 1.3rem; position: relative; }
 .hero-highlights li::before { content: "\2022"; color: var(--color-accent-red); position: absolute; left: 0; }
 
+.tiny-note {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin: 0.35rem 0 0;
+}
+
 /* Signup */
 .signup-card {
   background: var(--color-surface);
@@ -199,6 +205,51 @@ a:hover { color: var(--color-primary-dark); }
   margin: 1.2rem auto;
 }
 .code-block code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .container { padding: 0 1rem; }
+  .section { padding: 3rem 0 2.6rem; }
+  .section h2 { font-size: 1.55rem; }
+  .section-intro { font-size: 0.95rem; }
+
+  .hero { padding: 3.2rem 0 2.6rem; }
+  .hero-text h1 { font-size: clamp(1.7rem, 5.8vw, 2.2rem); line-height: 1.25; }
+  .hero-subtitle { font-size: 0.95rem; max-width: 100%; margin: 0 auto 1rem; padding: 0 0.35rem; }
+  .eyebrow { font-size: 0.78rem; padding: 0.22rem 0.55rem; }
+  .pill { font-size: 0.82rem; padding: 0.35rem 0.7rem; }
+  .hero-highlights { max-width: 100%; font-size: 0.9rem; }
+
+  .signup-card { padding: 1.35rem; margin: 1.6rem auto 0; }
+  .signup-form { flex-direction: column; align-items: stretch; gap: 0.65rem; }
+  .signup-form button { width: 100%; }
+
+  .hero-image { max-width: 100%; margin: 1.6rem auto; }
+  .image-card { max-width: 100%; }
+  .code-block { max-width: 100%; }
+
+  .step-card { padding: 1rem; }
+  .data-grid { gap: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 2.6rem 0 2.2rem; }
+  .section h2 { font-size: 1.4rem; }
+  .section-intro { font-size: 0.9rem; }
+
+  .hero { padding: 2.8rem 0 2.2rem; }
+  .hero-text h1 { font-size: clamp(1.5rem, 6.5vw, 1.9rem); }
+  .hero-subtitle { font-size: 0.9rem; padding: 0 0.4rem; }
+  .pill { font-size: 0.78rem; padding: 0.32rem 0.65rem; }
+  .hero-highlights { font-size: 0.88rem; }
+
+  .signup-card { padding: 1.2rem; }
+  .signup-subtitle { font-size: 0.9rem; }
+  .signup-form input[type="email"] { font-size: 0.88rem; padding: 0.65rem 0.8rem; }
+  .signup-form button { font-size: 0.9rem; }
+
+  .code-block { font-size: 0.82rem; }
+}
 
 /* Footer */
 .site-footer { border-top: 1px solid rgba(255, 255, 255, 0.08); background: #0b0f1c; padding: 1.4rem 0; margin-top: 1.5rem; font-size: 0.88rem; }
