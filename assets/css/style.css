@@ -69,12 +69,6 @@ a:hover { color: var(--color-primary-dark); }
 .hero-highlights li { margin-bottom: 0.45rem; padding-left: 1.3rem; position: relative; }
 .hero-highlights li::before { content: "\2022"; color: var(--color-accent-red); position: absolute; left: 0; }
 
-.tiny-note {
-  font-size: 0.82rem;
-  color: var(--color-muted);
-  margin: 0.35rem 0 0;
-}
-
 /* Signup */
 .signup-card {
   background: var(--color-surface);
